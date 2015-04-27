@@ -191,11 +191,13 @@ static struct irods_server * connect_to_host( const char *hostport )
 		time_t nexttry;\
 		time_t current;\
 		time_t stoptime = STOPTIME_DEFAULT;\
+		debug(D_IRODS,"RETRY_PATH_START");\
 		while(1) {\
 			struct irods_server *server = connect_to_host(host);\
 			if(server) {
 
 #define RETRY_PATH_END(onerror,dircheck) \
+				debug(D_IRODS,"RETRY_PATH_END(%d,%d) <- %d", (int)onerror, dircheck, result);\
 				if(result>=0)\
 					break;\
 				else {\
