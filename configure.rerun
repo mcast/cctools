@@ -1,0 +1,2 @@
+#!/bin/sh
+./configure --debug --prefix /nfs/users/nfs_m/mca/build --with-irods-path /usr/local/iRODS --without-system-sand --without-system-allpairs --without-system-wavefront --without-system-makeflow --without-system-resource_monitor --without-system-doc
